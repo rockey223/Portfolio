@@ -1,0 +1,23 @@
+@import 'colors.css';
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+#works{
+    
+    display: block;
+    
+    position: relative;
+    top: 60vh;
+    padding-top: 15vh;
+}
+.work-image{
+    height: 270px;
+    width: 270px;
+}
+
+.work-title{
+    font-family: 'Poppins', sans-serif;
+    color: var(--blue);
+}
+.click{
+    color: var(--blue);
+}

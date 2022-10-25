@@ -1,0 +1,46 @@
+
+@import 'colors.css';
+
+#about{
+    
+    position: relative;
+    top: 20vh;
+    padding-top: 15vh;
+}
+.title{
+    color: var(--blue);
+}
+.heading::after{
+    content: "";
+  height: 1px;
+  background-color: var(--blue);
+  display: block;
+  width: 100%;
+}
+.heading::before{
+    content: "";
+  height: 5px;
+  background-color: var(--purple);
+  display: block;
+  position: relative;
+  top: 95%;
+  width: 30%;
+  left: 35%;
+}
+
+.image{
+    position: relative;
+    top: 10vh;
+    height: 327px;
+    width:228px;
+}
+
+.tagline{
+    color: var(--blue);
+    font-family: 'Poppins', sans-serif;
+}
+
+.initial{
+    color: var(--blue);
+}
+

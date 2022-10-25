@@ -1,0 +1,32 @@
+@import 'colors.css';
+
+
+#home{
+    position: relative;
+    
+    height: 80vh;
+}
+.text{
+    position: relative;
+    top: 30vh;
+}
+
+.buttons{
+    display: flex;
+    gap: 50px;
+    margin-top: 80px;
+}
+.btn{
+    border-radius: 25px!important;
+    height: 56px!important;
+    width: 212px!important;
+    font-size: 1rem;
+}
+.btn-primary{
+    background-color: var(--blue);
+}
+
+.image{
+    position: relative;
+    top: 17vh;
+}

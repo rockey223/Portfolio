@@ -1,0 +1,78 @@
+@import 'colors.css';
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+#skills{
+    
+    position: relative;
+    top: 40vh;
+    padding-top: 15vh;
+}
+
+.topics{
+    position: relative;
+    top: 10vh;
+    color: var(--white);
+    font-size: 24px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.bg{
+    position: relative;
+    height: 15px;
+    width: 100%;
+    background-color: var(--white);
+    border-radius: 25px;
+}
+.overlay{
+    position: absolute;
+    height: 15px;
+    
+    background-color: var(--blue);
+    border-radius: 25px;
+    animation: progress 1s ease-in-out forwards;
+    opacity: 0;
+}
+
+.html{
+    width: 75%;
+    animation-delay: 01s ;
+}
+.js{
+    width: 20%;
+    animation-delay: 01s ;
+}
+.ps{
+    width: 60%;
+    animation-delay: 01s ;
+}
+.id{
+    width: 25%;
+    animation-delay: 01s ;
+}
+.css{
+    width: 50%;
+    animation-delay: 01s ;
+}
+.php{
+    width: 20%;
+    animation-delay: 01s ;
+}
+.ill{
+    width: 40%;
+    animation-delay: 01s ;
+}
+.dart{
+    width: 10%;
+    animation-delay: 01s ;
+}
+
+@keyframes progress {
+    0% {
+        width: 0;
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}

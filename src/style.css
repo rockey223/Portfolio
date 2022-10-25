@@ -1,0 +1,13 @@
+@import './components/colors.css';
+ 
+body{
+    background-color: #000!important;
+    
+}
+.container{
+    color: var(--white);
+}
+
+a{
+    text-decoration: none;
+}
