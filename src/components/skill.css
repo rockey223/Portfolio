@@ -23,47 +23,18 @@
     background-color: var(--white);
     border-radius: 25px;
 }
-.overlay{
-    position: absolute;
+
+
+
+.skills {
+	
+	position: absolute;
     height: 15px;
-    
+    animation-delay: 01s ;
     background-color: var(--blue);
     border-radius: 25px;
     animation: progress 1s ease-in-out forwards;
     opacity: 0;
-}
-
-.html{
-    width: 75%;
-    animation-delay: 01s ;
-}
-.js{
-    width: 20%;
-    animation-delay: 01s ;
-}
-.ps{
-    width: 60%;
-    animation-delay: 01s ;
-}
-.id{
-    width: 25%;
-    animation-delay: 01s ;
-}
-.css{
-    width: 50%;
-    animation-delay: 01s ;
-}
-.php{
-    width: 20%;
-    animation-delay: 01s ;
-}
-.ill{
-    width: 40%;
-    animation-delay: 01s ;
-}
-.dart{
-    width: 10%;
-    animation-delay: 01s ;
 }
 
 @keyframes progress {
