@@ -63,7 +63,7 @@ const Contact = () => {
                   label="Your Name"
                   className="mb-3"
                 >
-                  <Form.Control type="name" name="name" autocomplete="off" placeholder="Jhon Doe" />
+                  <Form.Control type="name" name="name" autocomplete="off"  />
                 </FloatingLabel>
               </Col>
               <Col sm={12} md={6}>
@@ -72,7 +72,7 @@ const Contact = () => {
                   label="Email address"
                   className="mb-3"
                 >
-                  <Form.Control type="email" name="email" autocomplete="off" placeholder="name@example.com" />
+                  <Form.Control type="email" name="email" autocomplete="off"  />
                 </FloatingLabel>
               </Col>
             </Row>
@@ -82,7 +82,7 @@ const Contact = () => {
               label="Subject"
               className="mb-3"
             >
-              <Form.Control type="text" name="subject" autocomplete="off" placeholder="Subject" />
+              <Form.Control type="text" name="subject" autocomplete="off"  />
             </FloatingLabel>
               </Col>
             </Row>
@@ -97,7 +97,7 @@ const Contact = () => {
                 type="text"
                 autocomplete="off"
                 name="message"
-                placeholder="Your message"
+                
                 style={{ height: "100px" }}
               />
             </FloatingLabel>
