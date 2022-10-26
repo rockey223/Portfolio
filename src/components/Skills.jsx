@@ -8,13 +8,13 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Slide from "react-reveal/Slide";
 
-const SkillBar = ({ done }) => {
+const SkillBar = ({ skill }) => {
   const [style, setStyle] = React.useState({});
 
   setTimeout(() => {
     const newStyle = {
       opacity: 1,
-      width: `${done}%`,
+      width: `${skill}%`,
     };
 
     setStyle(newStyle);
@@ -44,7 +44,7 @@ const Skills = () => {
                 </div>
 
                 <div className="bg">
-                  <SkillBar done="75" />
+                  <SkillBar skill="75" />
                 </div>
               </div>
               <div className="mb-5">
@@ -54,7 +54,7 @@ const Skills = () => {
                 </div>
 
                 <div className="bg">
-                  <SkillBar done="20" />
+                  <SkillBar skill="20" />
                 </div>
               </div>
               <div className="mb-5">
@@ -64,7 +64,7 @@ const Skills = () => {
                 </div>
 
                 <div className="bg">
-                  <SkillBar done="60" />
+                  <SkillBar skill="60" />
                 </div>
               </div>
               <div className="mb-5">
@@ -74,7 +74,7 @@ const Skills = () => {
                 </div>
 
                 <div className="bg">
-                  <SkillBar done="25" />
+                  <SkillBar skill="25" />
                 </div>
               </div>
             </Slide>
@@ -88,7 +88,7 @@ const Skills = () => {
                 </div>
 
                 <div className="bg">
-                  <SkillBar done="50" />
+                  <SkillBar skill="50" />
                 </div>
               </div>
               <div className="mb-5">
@@ -98,7 +98,7 @@ const Skills = () => {
                 </div>
 
                 <div className="bg">
-                  <SkillBar done="20" />
+                  <SkillBar skill="20" />
                 </div>
               </div>
               <div className="mb-5">
@@ -108,7 +108,7 @@ const Skills = () => {
                 </div>
 
                 <div className="bg">
-                  <SkillBar done="40" />
+                  <SkillBar skill="40" />
                 </div>
               </div>
               <div>
@@ -118,7 +118,7 @@ const Skills = () => {
                 </div>
 
                 <div className="bg">
-                  <SkillBar done="10" />
+                  <SkillBar skill="10" />
                 </div>
               </div>
             </Slide>
