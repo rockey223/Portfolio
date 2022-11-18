@@ -56,7 +56,7 @@ const Work = () => {
         <div className="d-flex justify-content-center fs-4">
           <span className="d-flex gap-2">
             For more
-            <Nav.Link href="#works" className="click">
+            <Nav.Link href="http://maharjanprashant.com.np/" className="click">
               {" "}
               click here
             </Nav.Link>
