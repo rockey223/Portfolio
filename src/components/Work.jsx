@@ -43,7 +43,7 @@ const Work = () => {
           <Col lg={4} md={6} sm={12} className="mb-3">
             <Slide bottom>
               <Nav.Link
-                href="#home"
+                href="https://qrgeneratorp.netlify.app/"
                 className="d-flex flex-column align-items-center"
               >
                 <img src={qr} alt="" className="work-image" />
