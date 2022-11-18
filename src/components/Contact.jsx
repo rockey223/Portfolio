@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 import Container from "react-bootstrap/Container";
 import "./contact.css";
@@ -12,9 +12,51 @@ import { MdEmail as Mail } from "react-icons/md";
 import Form from "react-bootstrap/Form";
 import FloatingLabel from "react-bootstrap/FloatingLabel";
 import Button from "react-bootstrap/Button";
-import contactForm from "./contactform.php"
+
+import axios from "axios";
+
+
+
+
 
 const Contact = () => {
+
+
+
+  const [email, setEmail] = useState("");
+  const [subject, setSubject] = useState("");
+  const [message, setMessage] = useState("");
+  const [name, setName] = useState("");
+  const [ isLoading, setIsLoading ] = useState(false);
+ 
+
+
+  function handleForm(event) {
+    setIsLoading(true);
+    
+    event.preventDefault();
+    const data = {
+      
+      name: name,
+      email: email,
+      subject: subject,
+      message: message
+    };
+    
+    axios
+      .post(`http://maharjanp.com.np/project/pages/processes/contactform.php?name=${name}&email=${email}&subject=${subject}&message=${message}`, data)
+      .then((response) => {
+        
+        if (response.data.status === 200) {
+          
+          console.log("Successfully sent");
+        }
+        setIsLoading(false);
+      });
+  }
+  
+
+
   return (
     <Container id="contact">
       <div className="title d-flex justify-content-center">
@@ -55,7 +97,7 @@ const Contact = () => {
         </Col>
         <Col sm={12} md={6}>
         <Slide right>
-          <Form action={contactForm} method="POST">
+          <Form onSubmit={handleForm} >
             <Row>
               <Col sm={12} md={6}>
                 <FloatingLabel
@@ -63,7 +105,8 @@ const Contact = () => {
                   label="Your Name"
                   className="mb-3"
                 >
-                  <Form.Control type="name" name="name" autocomplete="off"  />
+                  
+                  <Form.Control type="name" name="name" autoComplete="off" onChange={(event) => setName(event.target.value)}  />
                 </FloatingLabel>
               </Col>
               <Col sm={12} md={6}>
@@ -72,7 +115,7 @@ const Contact = () => {
                   label="Email address"
                   className="mb-3"
                 >
-                  <Form.Control type="email" name="email" autocomplete="off"  />
+                  <Form.Control type="email" name="email" autoComplete="off" onChange={(event) => setEmail(event.target.value)} />
                 </FloatingLabel>
               </Col>
             </Row>
@@ -82,7 +125,7 @@ const Contact = () => {
               label="Subject"
               className="mb-3"
             >
-              <Form.Control type="text" name="subject" autocomplete="off"  />
+              <Form.Control type="text" name="subject" autoComplete="off" onChange={(event) => setSubject(event.target.value)} />
             </FloatingLabel>
               </Col>
             </Row>
@@ -95,9 +138,9 @@ const Contact = () => {
               <Form.Control
                 as="textarea"
                 type="text"
-                autocomplete="off"
+                autoComplete="off"
                 name="message"
-                
+                onChange={(event) => setMessage(event.target.value)}
                 style={{ height: "100px" }}
               />
             </FloatingLabel>
@@ -106,8 +149,17 @@ const Contact = () => {
             
             <Row className="justify-content-center mt-4">
               <Col sm={12} className="d-flex justify-content-center">
-                <Button variant="primary" type="submit">
+                <Button variant="primary" type="submit" >
                   Send Message
+                  {isLoading ? (
+    <span
+      className="spinner-border spinner-border-sm ml-5"
+      role="status"
+      aria-hidden="true"
+    ></span>
+  ) : (
+    <span></span>
+  )}
                 </Button>
               </Col>
             </Row>
