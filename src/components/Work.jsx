@@ -21,7 +21,7 @@ const Work = () => {
           <Col lg={4} md={6} sm={12} className="mb-3">
             <Slide bottom>
               <Nav.Link
-                href="#home"
+                href="https://rpquiz.netlify.app/"
                 className="d-flex flex-column align-items-center"
               >
                 <img src={quizz} alt="" className="work-image" />
@@ -32,7 +32,7 @@ const Work = () => {
           <Col lg={4} md={6} sm={12} className="mb-3">
             <Slide bottom>
               <Nav.Link
-                href="#home"
+                href="https://prashantscalculator.netlify.app/"
                 className="d-flex flex-column align-items-center"
               >
                 <img src={calc} alt="" className="work-image" />
