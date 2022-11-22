@@ -27,12 +27,12 @@ const Contact = () => {
   const [subject, setSubject] = useState("");
   const [message, setMessage] = useState("");
   const [name, setName] = useState("");
-  const [ isLoading, setIsLoading ] = useState(false);
+  
  
 
 
   function handleForm(event) {
-    setIsLoading(true);
+    
     
     event.preventDefault();
     const data = {
@@ -51,7 +51,7 @@ const Contact = () => {
           
           console.log("Successfully sent");
         }
-        setIsLoading(false);
+        
       });
   }
   
@@ -151,15 +151,7 @@ const Contact = () => {
               <Col sm={12} className="d-flex justify-content-center">
                 <Button variant="primary" type="submit" >
                   Send Message
-                  {isLoading ? (
-    <span
-      className="spinner-border spinner-border-sm ml-5"
-      role="status"
-      aria-hidden="true"
-    ></span>
-  ) : (
-    <span></span>
-  )}
+                  
                 </Button>
               </Col>
             </Row>
