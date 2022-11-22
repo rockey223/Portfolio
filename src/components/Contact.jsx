@@ -44,7 +44,7 @@ const Contact = () => {
     };
     
     axios
-      .post(`http://maharjanp.com.np/project/pages/processes/contactform.php?name=${name}&email=${email}&subject=${subject}&message=${message}`, data)
+      .post(`https://maharjanp.com.np/project/pages/processes/contactform.php?name=${name}&email=${email}&subject=${subject}&message=${message}`, data)
       .then((response) => {
         
         if (response.data.status === 200) {
