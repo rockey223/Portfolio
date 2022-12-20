@@ -7,7 +7,7 @@ import Col from "react-bootstrap/Col";
 import Button from "react-bootstrap/Button";
 import hero from "./assets/hero1.png";
 import Fade from "react-reveal/Fade";
-// import cv from "./assets/prashant cv.pdf";
+import cv from "./assets/prashant cv.pdf";
 
 const Hero = () => {
   return (
@@ -28,12 +28,15 @@ const Hero = () => {
             </div>
             <div className="buttons">
               
+            <a href={cv}><Button varient="primary">DOWNLOAD CV</Button></a>
              
-                <Button varient="primary">DOWNLOAD CV</Button>
+                
               
 
-              
+              <a href="#contact">
                 <Button varient="primary">HIRE ME</Button>
+              </a>
+                
              
             </div>
           </Fade>
