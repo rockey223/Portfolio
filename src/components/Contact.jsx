@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 
 import Container from "react-bootstrap/Container";
 import "./contact.css";
@@ -9,11 +9,12 @@ import Slide from "react-reveal/Slide";
 import { FaMapMarkerAlt as Location } from "react-icons/fa";
 import { FaPhoneAlt as Phone } from "react-icons/fa";
 import { MdEmail as Mail } from "react-icons/md";
-import Form from "react-bootstrap/Form";
-import FloatingLabel from "react-bootstrap/FloatingLabel";
-import Button from "react-bootstrap/Button";
+// import Form from "react-bootstrap/Form";
+// import FloatingLabel from "react-bootstrap/FloatingLabel";
+// import Button from "react-bootstrap/Button";
+import ContactForm from "./ContactForm";
 
-import axios from "axios";
+
 
 
 
@@ -23,38 +24,19 @@ const Contact = () => {
 
 
 
-  const [email, setEmail] = useState("");
-  const [subject, setSubject] = useState("");
-  const [message, setMessage] = useState("");
-  const [name, setName] = useState("");
-  
- 
-
-
-  function handleForm(event) {
     
-    
-    event.preventDefault();
-    const data = {
-      
-      name: name,
-      email: email,
-      subject: subject,
-      message: message
-    };
-    
-    axios
-      .post(`https://maharjanp.com.np/project/pages/processes/contactform.php?name=${name}&email=${email}&subject=${subject}&message=${message}`, data)
-      .then((response) => {
+  //   axios
+  //     .post(`https://maharjanp.com.np/project/pages/processes/contactform.php?name=${name}&email=${email}&subject=${subject}&message=${message}`, data)
+  //     .then((response) => {
         
-        if (response.data.status === 200) {
+  //       if (response.data.status === 200) {
           
-          console.log("Successfully sent");
-        }
+  //         console.log("Successfully sent");
+  //       }
         
-      });
+  //     });
       
-  }
+  // }
   
 
 
@@ -98,65 +80,7 @@ const Contact = () => {
         </Col>
         <Col sm={12} md={6}>
         <Slide right>
-          <Form onSubmit={handleForm} >
-            <Row>
-              <Col sm={12} md={6}>
-                <FloatingLabel
-                  controlId="floatingInput"
-                  label="Your Name"
-                  className="mb-3"
-                >
-                  
-                  <Form.Control type="name" name="name" autoComplete="off" onChange={(event) => setName(event.target.value)}  />
-                </FloatingLabel>
-              </Col>
-              <Col sm={12} md={6}>
-                <FloatingLabel
-                  controlId="floatingInput"
-                  label="Email address"
-                  className="mb-3"
-                >
-                  <Form.Control type="email" name="email" autoComplete="off" onChange={(event) => setEmail(event.target.value)} />
-                </FloatingLabel>
-              </Col>
-            </Row>
-            <Row>
-              <Col><FloatingLabel
-              controlId="floatingInput"
-              label="Subject"
-              className="mb-3"
-            >
-              <Form.Control type="text" name="subject" autoComplete="off" onChange={(event) => setSubject(event.target.value)} />
-            </FloatingLabel>
-              </Col>
-            </Row>
-            <Row>
-              <Col><FloatingLabel
-              controlId="floatingtextarea"
-              label="Message"
-              className="mb-3"
-            >
-              <Form.Control
-                as="textarea"
-                type="text"
-                autoComplete="off"
-                name="message"
-                onChange={(event) => setMessage(event.target.value)}
-                style={{ height: "100px" }}
-              />
-            </FloatingLabel>
-              </Col>
-            </Row>
-            
-            <Row className="justify-content-center mt-4">
-              <Col sm={12} className="d-flex justify-content-center">
-                <Button variant="primary" type="submit" >
-                  Send Message
-                  
-                </Button>
-              </Col>
-            </Row>
-          </Form>
+          <ContactForm/>
         </Slide>
           
         </Col>
