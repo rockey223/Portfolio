@@ -1,7 +1,7 @@
 {
   "name": "portfolio",
   "homepage": "https://rockey223.github.io/Portfolio",
-  "proxy": "https://maharjanp.com.np",
+  "proxy": "https://maharjanp.com.np/project/pages/processes/contactform.php",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
