@@ -36,12 +36,19 @@ const ContactForm = () => {
 
     function sendMail(event){
         event.preventDefault();
-        axios.post("https://maharjanp.com.np/project/pages/processes/contactform.php",{
-            name:contact.name,
-            email: contact.email,
-            subject:contact.subject,
-            message: contact.message
-        })
+        let formData = new FormData();
+        formData.append('name',contact.name)
+        formData.append('email',contact.email)
+        formData.append('subject',contact.subject)
+        formData.append('message',contact.message)
+       
+        console.log(formData)
+        axios.post({
+          url: 'https://maharjanp.com.np/sendmail/',
+        data: formData,
+        config: {headers: {'Content-Type':'multipart/form-data'}}
+            
+    })
         .then((response)=>{
             console.log(response)
         })
