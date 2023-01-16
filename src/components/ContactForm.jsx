@@ -43,12 +43,11 @@ const ContactForm = () => {
         formData.append('message',contact.message)
        
         console.log(formData)
-        axios.post({
-          url: 'https://maharjanp.com.np/sendmail/',
-        data: formData,
+        axios.post('https://maharjanp.com.np/sendmail/',
+        {data: formData,
         config: {headers: {'Content-Type':'multipart/form-data'}}
             
-    })
+        })
         .then((response)=>{
             console.log(response)
         })
