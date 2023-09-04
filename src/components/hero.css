@@ -15,7 +15,6 @@
     display: flex;
     gap: 50px;
     margin-top: 80px;
-    flex-wrap:wrap;
 }
 .btn{
     border-radius: 25px!important;
