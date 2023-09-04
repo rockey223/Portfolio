@@ -1,7 +1,7 @@
 {
   "name": "portfolio",
   "homepage": "https://pmaharjan.com.np",
-  "proxy": "https://maharjanp.com.np",
+  "proxy": "https://pmaharjan.com.np/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
