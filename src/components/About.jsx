@@ -44,7 +44,7 @@ const About = () => {
                       <span className="fs-5 fw-bold initial">
                         Website:
                       </span>
-                      <span className="fs-5"> maharjanp.com.np </span>
+                      <span className="fs-5"> pmaharjan.com.np </span>
                     </div>
                     <div className="mb-3">
                       <span className="fs-5 fw-bold initial">
