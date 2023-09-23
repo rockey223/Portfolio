@@ -14,7 +14,7 @@ const Work = () => {
   return (
     <Container id="works">
       <div className="title d-flex justify-content-center">
-        <span className="fs-1 heading">Works</span>
+        <span className="fs-1 heading">Projects</span>
       </div>
       <Container className="mt-5">
         <Row>
@@ -57,7 +57,7 @@ const Work = () => {
           <span className="d-flex gap-2">
             For more
             <Nav.Link href="http://maharjanprashant.com.np/" className="click">
-              {" "}
+             
               click here
             </Nav.Link>
           </span>
